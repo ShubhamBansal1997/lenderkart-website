@@ -8,7 +8,7 @@ import Contact from "@/components/contact"
 export function CtaSection() {
   return (
     <section id="cta" className="container">
-      <div className="flex items-center rounded-xl bg-primary px-6 py-24 gap-5 flex-row sm:flex-col">
+      <div className="flex items-center rounded-xl bg-primary px-6 py-24 gap-5 flex-col sm:flex-row">
         <div className="flex flex-col gap-5 w-full sm:w-1/2">
           <span className="font-bold uppercase text-background text-left">Let’s Talk</span>
           <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl text-balance max-w-xl sm:leading-tight text-primary-foreground text-left">
