@@ -76,6 +76,10 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         heading: ["var(--font-heading)", ...fontFamily.sans],
       },
+      height: {
+        '70vh': '70vh',
+        '60vh': '60vh',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
