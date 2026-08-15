@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-const CAL_LINK = "aanandmadhav/30min";
-const NAMESPACE = "lenderkartIntro";
+const CAL_LINK = "aanandmadhav/15min";
+const NAMESPACE = "15min";
 
 type CalFn = ((...args: unknown[]) => void) & {
   ns?: Record<string, (...args: unknown[]) => void>;
@@ -75,7 +75,7 @@ export default function CalEmbed() {
       return;
     }
 
-    Cal("init", NAMESPACE, { origin: "https://app.cal.com" });
+    Cal("init", NAMESPACE, { origin: "https://cal.com" });
 
     const ns = Cal.ns?.[NAMESPACE];
     if (!ns) {

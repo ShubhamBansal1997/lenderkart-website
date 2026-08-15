@@ -434,7 +434,7 @@ export default function Home() {
               </h2>
               <p className="reveal mx-auto mt-6 text-[17px] leading-relaxed text-white/65">
                 Every agency has a different panel, different commercials and a
-                different definition of a good lead. Pick a 30-minute slot and
+                different definition of a good lead. Pick a 15-minute slot and
                 we will show you how the engine would route yours.
               </p>
             </div>
