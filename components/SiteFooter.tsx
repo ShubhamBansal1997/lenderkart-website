@@ -55,10 +55,10 @@ export default function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@lenderkart.com"
+                  href="mailto:aanand@lenderkart.com"
                   className="text-white/70 hover:text-lime"
                 >
-                  hello@lenderkart.com
+                  aanand@lenderkart.com
                 </a>
               </li>
               <li>

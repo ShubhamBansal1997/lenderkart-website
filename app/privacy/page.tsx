@@ -84,10 +84,10 @@ export default function PrivacyPage() {
               law requires it.
             </p>
             <a
-              href="mailto:privacy@lenderkart.com"
+              href="mailto:aanand@lenderkart.com"
               className="mt-6 inline-flex rounded-full bg-lime px-7 py-3.5 font-semibold text-plum-deep transition-transform duration-200 hover:-translate-y-0.5"
             >
-              privacy@lenderkart.com
+              aanand@lenderkart.com
             </a>
           </div>
 
@@ -349,10 +349,10 @@ const SECTIONS: { id: string; title: string; body: React.ReactNode }[] = [
         <p>
           To exercise any of these, email{" "}
           <a
-            href="mailto:privacy@lenderkart.com"
+            href="mailto:aanand@lenderkart.com"
             className="text-lime underline underline-offset-4"
           >
-            privacy@lenderkart.com
+            aanand@lenderkart.com
           </a>
           . We may need to verify your identity first. If your request concerns
           an enquiry you submitted on a client&rsquo;s website, we will pass it
@@ -405,8 +405,7 @@ const SECTIONS: { id: string; title: string; body: React.ReactNode }[] = [
         </p>
         <Ul
           items={[
-            "Privacy: privacy@lenderkart.com",
-            "General enquiries: hello@lenderkart.com",
+            "Email: aanand@lenderkart.com",
             "Postal: LenderKart, Delhi, India",
           ]}
         />

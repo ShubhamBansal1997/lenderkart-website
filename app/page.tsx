@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LaneField from "@/components/LaneField";
 import ExplainerVideo from "@/components/ExplainerVideo";
+import CalEmbed from "@/components/CalEmbed";
 
 const STATS = [
   { value: "< 1s", label: "from submit to matched offer" },
@@ -425,30 +426,32 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(110%_120%_at_50%_100%,#3a0a72_0%,#150029_62%)]" />
           <LaneField className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-full w-full opacity-60" />
 
-          <div className="mx-auto max-w-[820px] px-5 py-28 text-center sm:px-8 sm:py-36">
-            <SectionLabel center>Let&rsquo;s talk</SectionLabel>
-            <h2 className="reveal mt-5 font-display text-[clamp(2.2rem,5.2vw,3.6rem)] font-extrabold leading-[1.04] tracking-[-0.035em]">
-              Book an intro call today.
-            </h2>
-            <p className="reveal mx-auto mt-6 max-w-[560px] text-[17px] leading-relaxed text-white/65">
-              Every agency has a different panel, different commercials and a
-              different definition of a good lead. Tell us yours and we will show
-              you how the engine would route it.
-            </p>
-            <div className="reveal mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="mailto:hello@lenderkart.com?subject=LenderKart%20intro%20call"
-                className="w-full rounded-full bg-lime px-8 py-4 text-center font-semibold text-plum-deep transition-transform duration-200 hover:-translate-y-0.5 sm:w-auto"
-              >
-                hello@lenderkart.com
-              </a>
-              <Link
-                href="#how-it-works"
-                className="w-full rounded-full border hairline bg-white/[0.05] px-8 py-4 text-center font-semibold text-white transition-colors duration-200 hover:bg-white/[0.1] sm:w-auto"
-              >
-                Read how it works
-              </Link>
+          <div className="mx-auto max-w-[980px] px-5 py-24 sm:px-8 sm:py-28">
+            <div className="mx-auto max-w-[620px] text-center">
+              <SectionLabel center>Let&rsquo;s talk</SectionLabel>
+              <h2 className="reveal mt-5 font-display text-[clamp(2.2rem,5.2vw,3.6rem)] font-extrabold leading-[1.04] tracking-[-0.035em]">
+                Book an intro call today.
+              </h2>
+              <p className="reveal mx-auto mt-6 text-[17px] leading-relaxed text-white/65">
+                Every agency has a different panel, different commercials and a
+                different definition of a good lead. Pick a 30-minute slot and
+                we will show you how the engine would route yours.
+              </p>
             </div>
+
+            <div className="reveal mt-12">
+              <CalEmbed />
+            </div>
+
+            <p className="reveal mt-8 text-center text-[15px] text-white/50">
+              Prefer email?{" "}
+              <a
+                href="mailto:aanand@lenderkart.com?subject=LenderKart%20enquiry"
+                className="text-lime underline underline-offset-4"
+              >
+                aanand@lenderkart.com
+              </a>
+            </p>
           </div>
         </div>
       </section>
