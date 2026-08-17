@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — from the 2026 identity refresh */
+  --color-violet: #6632ff;
+  --color-violet-bright: #7c4dff;
+  --color-lime: #74fe5b;
+  --color-lime-deep: #4fe23a;
+  --color-plum: #330065;
+  --color-plum-deep: #22063d;
+  --color-ink: #150029;
+  --color-ink-soft: #1d0a35;
+  --color-mist: #f5f2fb;
+  --color-mist-deep: #e7e0f5;
+
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 20px;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  /* No global overflow-x guard: `hidden` on html/body makes it a scroll
+     container, `clip` clips at the initial containing block and blanks the
+     page once scrolled. Bleeding decoration is clipped per-section instead. */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-ink);
+  color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-plum-deep);
+}
+
+/* Focus ring that stays visible on both grounds */
+:where(a, button, summary, input, textarea, select):focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* --- Brand motif: routing lanes ------------------------------------- */
+
+.lane-dash {
+  stroke-dasharray: 1.6 1.6;
+}
+
+@keyframes lane-travel {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+.lane-flow {
+  animation: lane-travel 9s linear infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+.drift {
+  animation: drift 9s ease-in-out infinite;
+}
+
+/* --- Reveal on scroll ------------------------------------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- Utilities ------------------------------------------------------- */
+
+.text-gradient {
+  /* oklch keeps chroma up across the ramp — sRGB interpolation goes grey in
+     the middle of a violet-to-green blend. */
+  background: linear-gradient(
+    100deg in oklch,
+    #8f6bff 0%,
+    #74fe5b 78%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hairline {
+  border-color: color-mix(in oklab, #fff 12%, transparent);
+}
+
+.glass {
+  background: color-mix(in oklab, var(--color-ink) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+}
