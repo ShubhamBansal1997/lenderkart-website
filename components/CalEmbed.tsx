@@ -138,7 +138,7 @@ export default function CalEmbed() {
           href={`https://cal.com/${CAL_LINK}`}
           className="block p-8 text-center text-lime underline"
         >
-          Book a 30-minute intro call
+          Book a 15-minute intro call
         </a>
       </noscript>
     </div>
